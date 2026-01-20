@@ -4,8 +4,20 @@ packit_instances: ["prod", "stg"]
 packages:
   hello:
     specfile_path: hello.spec
+    downstream_package_name: hello
+    upstream_package_name: hello
+    paths:
+      - ./hello_world
+    files_to_sync:
+      - hello.spec
   goodbye:
     specfile_path: goodbye.spec
+    downstream_package_name: goodbye
+    upstream_package_name: goodbye
+    paths:
+      - ./goodbye_world
+    files_to_sync:
+      - goodbye.spec
 
 
 jobs:

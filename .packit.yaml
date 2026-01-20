@@ -1,15 +1,25 @@
 ---
 packit_instances: ["prod", "stg"]
-specfile_path: hello.spec
-files_to_sync:
-  - .packit.yaml
-  - hello.spec
-upstream_package_name: hello
-downstream_package_name: hello
-# actions:
-#   post-upstream-clone: "python3 setup.py sdist --dist-dir ."
-# current_version_command: ["python3", "setup.py", "--version"]
-# create_tarball_command: ["python3", "setup.py", "sdist", "--dist-dir", "."]
+
+packages:
+  hello:
+    specfile_path: hello.spec
+    downstream_package_name: hello
+    upstream_package_name: hello
+    paths:
+      - ./hello_world
+    files_to_sync:
+      - hello.spec
+  goodbye:
+    specfile_path: goodbye.spec
+    downstream_package_name: goodbye
+    upstream_package_name: goodbye
+    paths:
+      - ./goodbye_world
+    files_to_sync:
+      - goodbye.spec
+
+
 jobs:
 - job: copr_build
   trigger: pull_request

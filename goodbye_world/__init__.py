@@ -10,7 +10,7 @@ import sys
 
 def usage():
     print(
-        "Usage: goodbye NAME\n"
+        "Usage: goodbye little NAME\n"
     )
     sys.exit(3)
 

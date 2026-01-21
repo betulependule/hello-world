@@ -24,7 +24,7 @@ jobs:
 - job: copr_build
   trigger: pull_request
   targets:
-  - fedora-stable-x86_64
+  - fedora-42-x86_64
 
 - job: copr_build
   trigger: release

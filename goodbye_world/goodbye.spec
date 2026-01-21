@@ -24,7 +24,7 @@ BuildRequires:  python3-setuptools
 
 %files
 %license LICENSE
-%{_bindir}/hello
+%{_bindir}/goodbye
 %{python3_sitelib}/*
 %doc README.md
 
